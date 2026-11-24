@@ -38,7 +38,7 @@ flowchart LR
 ## Структура проєкту
 
 ```text
-landing-keepsake-vite/
+landing-keepsake-9lab/
 ├── .github/workflows/
 │   └── deploy.yml
 ├── .husky/
@@ -105,23 +105,3 @@ landing-keepsake-vite/
 | **Prettier + `@prettier/plugin-pug`**            | Єдиний стиль форматування для Pug, SCSS, JS та конфігів                  |
 | **Stylelint + `stylelint-config-standard-scss`** | Статичний аналіз SCSS, перевірка БЕМ-селекторів та глибини вкладеності   |
 | **Husky + lint-staged**                          | Запуск лінтерів на staged-файлах перед кожним комітом (`pre-commit`)     |
-
-## Цільові браузери (Browserslist)
-
-Plaintext
-
-```
-last 2 Chrome versions
-last 2 Firefox versions
-last 2 Edge versions
-last 2 Safari versions
-last 2 iOS versions
-```
-
-## Результати оптимізації
-
-| **Ресурс**                                          | **До оптимізації**           | **Після оптимізації**            | **Економія / Примітка**                                        |
-| --------------------------------------------------- | ---------------------------- | -------------------------------- | -------------------------------------------------------------- |
-| **Зображення картки**                               | ~2.5 KB (вихідний JPEG/WebP) | 9.77 kB (AVIF) / 10.55 kB (WebP) | Зменшення ваги на 60% без втрати візуальної якості             |
-| **Зображення картки (`400w`, мобільні)**            | ~2.5 KB                      | ~4.56 kB (AVIF) / 5.05 kB (WebP) | Завантаження меншого розміру через `srcset` + `loading="lazy"` |
-| **CSS-бандл (main.scss → dist/assets/main-\*.css)** | ~31.0 KB                     | 24.98 kB (gzip: 4.65 kB)         | Автоматична мініфікація esbuild у Vite + префікси Autoprefixer |
