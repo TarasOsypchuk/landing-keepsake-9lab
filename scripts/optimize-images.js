@@ -51,3 +51,4 @@ for (const file of files) {
 }
 
 console.log('\nГотово! Усі зображення збережено в src/assets/images/');
+// 6
